@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+package subscription;
+
+// The SubscriptionService definition.
+service SubscriptionService {
+  rpc Ping(PingRequest) returns (PingResponse);
+  rpc Subscribe(SubscribeRequest) returns (SubscribeResponse);
+  rpc ListSubscriptions(ListSubscriptionsRequest) returns (ListSubscriptionsResponse);
+  rpc Unsubscribe(UnsubscribeRequest) returns (UnsubscribeResponse);
+}
+
+// The PingRequest message.
+message PingRequest {
+  string message = 1;
+}
+
+// The PingResponse message.
+message PingResponse {
+  string message = 1;
+}
+
+// The SubscribeRequest message.
+message SubscribeRequest {
+  string email = 1;
+}
+
+// The SubscribeResponse message.
+message SubscribeResponse {
+}
+
+// The ListSubscriptionsRequest message.
+message ListSubscriptionsRequest {
+}
+
+// The ListSubscriptionsResponse message.
+message ListSubscriptionsResponse {
+  repeated string emails = 1;
+}
+
+// The UnsubscribeRequest message.
+message UnsubscribeRequest {
+  string email = 1;
+}
+
+// The UnsubscribeResponse message.
+message UnsubscribeResponse {
+}
+
+

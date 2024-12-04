@@ -1,0 +1,103 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            INSERT INTO SquadSubscription (\n                squad_pubkey, is_active, status, start_date, end_date, is_renewable, days, grace_period, tier, subscription_pubkey\n            )\n            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) \n            RETURNING id, squad_pubkey, is_active, status, start_date, end_date, is_renewable, days, grace_period, tier, subscription_pubkey, created_at, updated_at\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "id",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 1,
+        "name": "squad_pubkey",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 2,
+        "name": "is_active",
+        "type_info": "Bool"
+      },
+      {
+        "ordinal": 3,
+        "name": "status",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 4,
+        "name": "start_date",
+        "type_info": "Timestamp"
+      },
+      {
+        "ordinal": 5,
+        "name": "end_date",
+        "type_info": "Timestamp"
+      },
+      {
+        "ordinal": 6,
+        "name": "is_renewable",
+        "type_info": "Bool"
+      },
+      {
+        "ordinal": 7,
+        "name": "days",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 8,
+        "name": "grace_period",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 9,
+        "name": "tier",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 10,
+        "name": "subscription_pubkey",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 11,
+        "name": "created_at",
+        "type_info": "Timestamp"
+      },
+      {
+        "ordinal": 12,
+        "name": "updated_at",
+        "type_info": "Timestamp"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Varchar",
+        "Bool",
+        "Varchar",
+        "Timestamp",
+        "Timestamp",
+        "Bool",
+        "Int4",
+        "Int4",
+        "Varchar",
+        "Varchar"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "f7693cfb59289d969546c2c1dbf4b102f1976c2fa29c108149c9053e3eedf35f"
+}

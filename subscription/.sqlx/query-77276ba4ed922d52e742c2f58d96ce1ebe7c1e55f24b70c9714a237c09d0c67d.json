@@ -1,0 +1,64 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            SELECT \n                amount,\n                created_at,\n                payment_method,\n                status,\n                signature,\n                squad_pubkey,\n                squad_subscription_id,\n                spl_token_mint\n            FROM \n                SquadSubscriptionPayment \n            WHERE id = $1\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "amount",
+        "type_info": "Int8"
+      },
+      {
+        "ordinal": 1,
+        "name": "created_at",
+        "type_info": "Timestamp"
+      },
+      {
+        "ordinal": 2,
+        "name": "payment_method",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 3,
+        "name": "status",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 4,
+        "name": "signature",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 5,
+        "name": "squad_pubkey",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 6,
+        "name": "squad_subscription_id",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 7,
+        "name": "spl_token_mint",
+        "type_info": "Varchar"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Uuid"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+    ]
+  },
+  "hash": "77276ba4ed922d52e742c2f58d96ce1ebe7c1e55f24b70c9714a237c09d0c67d"
+}

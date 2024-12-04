@@ -1,0 +1,94 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            SELECT \n                id, squad_pubkey, is_active, status, start_date, end_date, is_renewable, days, grace_period, tier, subscription_pubkey, created_at, updated_at FROM SquadSubscription\n            WHERE id = $1\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "id",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 1,
+        "name": "squad_pubkey",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 2,
+        "name": "is_active",
+        "type_info": "Bool"
+      },
+      {
+        "ordinal": 3,
+        "name": "status",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 4,
+        "name": "start_date",
+        "type_info": "Timestamp"
+      },
+      {
+        "ordinal": 5,
+        "name": "end_date",
+        "type_info": "Timestamp"
+      },
+      {
+        "ordinal": 6,
+        "name": "is_renewable",
+        "type_info": "Bool"
+      },
+      {
+        "ordinal": 7,
+        "name": "days",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 8,
+        "name": "grace_period",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 9,
+        "name": "tier",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 10,
+        "name": "subscription_pubkey",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 11,
+        "name": "created_at",
+        "type_info": "Timestamp"
+      },
+      {
+        "ordinal": 12,
+        "name": "updated_at",
+        "type_info": "Timestamp"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Uuid"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "bc89186e14a3432314678d0fbeb5e5b1e0060f68ed5e9cd3e12298b2f0d2bfdc"
+}
