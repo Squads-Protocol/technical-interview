@@ -31,7 +31,7 @@ impl SubscriptionService for SubscriptionHandler {
         sqlx::query!(
             r#"
             INSERT INTO subscriptions (email)
-            VALUES ($1)
+            VALUES (?)
             "#,
             email
         )
